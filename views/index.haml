@@ -1,0 +1,35 @@
+%html  
+	%head  
+		%title canwe.be/lovers?
+		%link{:rel => "stylesheet", :href => "css/reset.css"}
+		%link{:rel => "stylesheet", :href => "css/stylesheet.css"}
+		%script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
+		%script{:type => "text/javascript"} 
+			:plain 
+				try{Typekit.load();}catch(e){}
+		%script{:type => "text/javascript"} 
+			:plain 
+				var _gaq = _gaq || [];                                                                                             
+				  _gaq.push(['_setAccount', 'UA-29127312-1']);                                                                       
+				  _gaq.push(['_trackPageview']);                                                                                     
+				  (function() {                                                                                                      
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;                         
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);                            
+				  })();
+	%body{:onload => "$('#loading').hide();"}
+		%header
+			%svg{:version => "1.1", :id => "heart_svg", :xmlns => "http://www.w3.org/2000/svg", :"xmlns:xlink" => "http://www.w3.org/1999/xlink", :"xmlns:a" => "http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/", :x => "0px", :y => "0px", :width => "75", :height => "65", :viewBox => "0 0 600 600", :overflow => "visible", :"enable-background" => "new 0 0 600 522", :"xml:space" => "preserve"}
+				%defs
+					%filter{:id => "f1", :x => "0", :y => "0", :width => "200%", :height => "200%"}
+						%feOffset{:result => "offOut", :in => "SourceAlpha", :dx => "20", :dy => "20"}/
+						%feGaussianBlur{:result => "blurOut", :in => "offOut", :stdDeviation => "10"}/
+						%feBlend{:in => "SourceGraphic", :in2 => "blurOut", :mode => "normal"}/
+				%path{:fill => "#E67A76", :d => "M74.569,299.305C22.58,248.282,0,192.345,0,142.29C0,56.923,56.924,0,143.259,0c80.451,0,107.965,37.304,155.06,91.268C345.413,37.304,372.89,0,453.341,0c86.373,0,143.297,56.923,143.297,142.29c0,50.055-22.581,105.993-74.569,157.016l-223.75,222.761L74.569,299.305z", :filter => "url(#f1)"}/
+			%h1 canwe.be/lovers?
+		#content
+			%p#loading Loading...
+			#card
+				%img{:src => "/card.jpg"}
+		%footer
+			%a{:id => "credit", :href => "http://devonblandin.com"} From the Devon Code Shop

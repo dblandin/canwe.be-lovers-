@@ -1,0 +1,48 @@
+.center {
+	margin:0 auto;
+}
+body {
+	background-color:#FFF7ED;
+}
+#page {
+	width:100%;
+}
+header, footer {
+	margin:20px auto;
+}
+header h1	 {
+	font-size:36px;
+}
+#heart_svg {
+	margin:0 auto;
+	display:block;
+}
+h1, p, a {
+	font-family:adobe-caslon-pro;
+	color:#1C2F42;
+	text-align:center;
+}
+#content {
+	width:800px;
+	margin:0 auto;
+}
+#card {
+	margin: 0 auto;
+}
+#card img {
+	width:100%;
+	display:block;
+}
+p.heart{position:absolute;top:200px;left:200px;font-size:30px;text-align:right}
+
+a {
+	position:fixed;
+	font-size:14px;
+	bottom:60px;
+	left:60px;
+	text-decoration:none;
+	color:#1C2F42;;
+}
+a:hover {
+	text-decoration:underline;
+}
