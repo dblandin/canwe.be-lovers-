@@ -7,6 +7,7 @@ require 'haml'
 require 'sass/plugin/rack'
 require 'sqlite3'
 require 'sequel'
+require 'pg'
 
 get '/css/stylesheet.css' do
   content_type :css
@@ -31,8 +32,7 @@ end
 
 get '/card.jpg' do
   content_type :jpg  
-  DB = Sequel.connect('sqlite://db/development.db') if ENV['RACK_ENV'] == 'development'
-  DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/mydb') if ENV['RACK_ENV'] == 'production'
+  DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://db/development.db')
   class Phrase < Sequel::Model
   end
   rand = rand(DB[:phrases].count) - 1
