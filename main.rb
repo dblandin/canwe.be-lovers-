@@ -5,9 +5,13 @@ require 'restclient'
 require 'stringio'
 require 'haml'
 require 'sass/plugin/rack'
-require 'sqlite3' if ENV['RACK_ENV'] == 'development'
-require 'sequel' 
-require 'pg' if ENV['RACK_ENV'] == 'production'
+require 'sequel'
+group :production do
+  require 'pg'
+end
+group :development, :test do
+  require 'sqlite3'
+end
 
 get '/css/stylesheet.css' do
   content_type :css
