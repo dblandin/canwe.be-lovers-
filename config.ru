@@ -1,6 +1,6 @@
 require './main.rb'
 IMGKit.configure do |config|
-  config.wkhtmltoimage = File.join(root, 'bin', 'wkhtmltoimage-amd64').to_s if ENV['RACK_ENV'] == 'production'
+  config.wkhtmltoimage = File.join('bin', 'wkhtmltoimage-amd64').to_s if ENV['RACK_ENV'] == 'production'
 end
 use Sass::Plugin::Rack
 mime_type :jpg, 'image/jpg'
