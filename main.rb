@@ -64,7 +64,7 @@ get '/card.jpg' do
     end
   end while valid != true
   
-  url = 'http://devonblandin.com/card.css'
+  url = 'http://canwe.be/css/card.css'
   css = StringIO.new( RestClient.get(url) )
   kit = IMGKit.new('<div><p>' + @phrase + '</p><img src ="' + @photo_source + '" /></div>')
   kit.stylesheets << css
