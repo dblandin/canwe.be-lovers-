@@ -35,14 +35,18 @@ h1, p, a {
 }
 p.heart{position:absolute;top:200px;left:200px;font-size:30px;text-align:right}
 
-a {
+footer {
 	position:fixed;
+	bottom:0;
+	padding:20px;
+}
+footer a:link, footer a:visited, footer p {
 	font-size:14px;
-	bottom:60px;
-	left:60px;
 	text-decoration:none;
 	color:#1C2F42;;
+	line-height:22px;
+	
 }
-a:hover {
+footer a:hover {
 	text-decoration:underline;
 }

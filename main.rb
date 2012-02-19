@@ -31,7 +31,11 @@ get '/lovers?' do
 end
 
 get '/card.jpg' do
-  content_type :jpg  
+  
+  # TO DO
+  # Set paramaer strings for photo id and phrase id for photo geneartion
+  
+  content_type :jpg
   DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://db/development.db')
   class Phrase < Sequel::Model
   end
