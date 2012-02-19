@@ -75,3 +75,4 @@ get '/card.jpg' do
   
   kit.to_jpg
 end
+
